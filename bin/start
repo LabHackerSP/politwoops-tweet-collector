@@ -1,5 +1,6 @@
 #!/bin/sh
-cd /home/breyten/politwoops-twitter-client/
+export PYTHONPATH=$PYTHONPATH:/home/rails/politwoops-tweet-collector/lib
+cd /home/rails/politwoops-tweet-collector
 ./bin/tweets-client.py >>./log/tweets-client.log 2>>./log/tweets-client.err &
 echo $! >./tweets-client.pid
 exit 0
